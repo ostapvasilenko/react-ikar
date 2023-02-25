@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Home = () => {
-  let [news, setNews] = useState([]); 
+  let [news, setNews] = useState([]);
 
   useEffect(() => {
     getNews();
@@ -17,7 +17,13 @@ const Home = () => {
     fetch(`${BASE_URL}/news`)
       .then(response => response.json())
       .then(data => {
-        setNews(data);
+        data.data.map((item) => {
+        return{
+          id: item.id,...item.atributes
+        }
+        })
+        console.log()
+        // setNews(data.data);
       })
   };
   return (
