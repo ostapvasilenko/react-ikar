@@ -1,7 +1,16 @@
-import React, { useState } from 'react'
+import React, {useState, useEffect} from 'react'
 
 const Home = () => {
-  let [news, setNews] = useState([]);
+  let [news, setNews] = useState([]); 
+
+  useEffect(() => {
+    getNews();
+  }, []);
+
+  useEffect(() => {
+    console.log(news)
+  }, [news]);
+
 
   const BASE_URL = 'https://admin.ikar-thinktank.org/api';
   const getNews = () => {
@@ -10,12 +19,9 @@ const Home = () => {
       .then(data => {
         setNews(data);
       })
-  }
+  };
   return (
-    <>
-
-      <div>Home</div>
-    </>
+    <div>Home</div>
   )
 }
 
