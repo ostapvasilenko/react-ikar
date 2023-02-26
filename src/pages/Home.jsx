@@ -58,6 +58,11 @@ const Home = () => {
           </div>
         );
       })}
+      <div>
+        {primaryPost.map((item) =>{
+          
+        })}
+      </div>
     </>
   );
 };
