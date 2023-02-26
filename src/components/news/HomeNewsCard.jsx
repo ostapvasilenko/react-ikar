@@ -1,11 +1,12 @@
 import React from 'react'
 
-function HomeNewsCard() {
+function HomeNewsCard = ({news}) => {
+    const{title, text} = news;
     return (
         <>
             <div>
-                <p></p>
-                <p></p>
+                <p>{title}</p>
+                <p>{text}</p>
             </div>
         </>
     )

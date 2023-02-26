@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+importNewsCard from "../components/news/HomeNewsCard"
 
 const Home = () => {
   let [news, setNews] = useState([]);
@@ -52,6 +53,7 @@ const Home = () => {
       <div>Home</div>
       {news.map((item) => {
         return (
+          <NewsCard key = {item, id} news={item}/>
           <div key={item.id}>
             <p>{item.title}</p>
             <p>{item.text}</p>
@@ -60,7 +62,7 @@ const Home = () => {
       })}
       <div>
         {primaryPost.map((item) =>{
-          
+
         })}
       </div>
     </>
