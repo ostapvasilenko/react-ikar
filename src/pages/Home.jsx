@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-importNewsCard from "../components/news/HomeNewsCard"
+import NewsCard from "../components/news/HomeNewsCard"
 
 const Home = () => {
   let [news, setNews] = useState([]);
