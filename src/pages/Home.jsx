@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import NewsCard from "../components/news/HomeNewsCard"
 
 const Home = () => {
   let [news, setNews] = useState([]);
-  let [primaryPost, setPrimaryPost] = useState([]);
+ 
 
   useEffect(() => {
     getNews();
@@ -12,8 +11,8 @@ const Home = () => {
 
   useEffect(() => {
     console.log(news);
-    console.log(primaryPost);
-  }, [news, primaryPost]);
+   
+  }, [news]);
 
   const BASE_URL = "https://admin.ikar-thinktank.org/api";
   const getNews = async () => {
@@ -53,18 +52,13 @@ const Home = () => {
       <div>Home</div>
       {news.map((item) => {
         return (
-          <NewsCard key = {item, id} news={item}/>
+         
           <div key={item.id}>
             <p>{item.title}</p>
             <p>{item.text}</p>
           </div>
         );
       })}
-      <div>
-        {primaryPost.map((item) =>{
-
-        })}
-      </div>
     </>
   );
 };

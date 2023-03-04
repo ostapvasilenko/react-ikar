@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 
 function HomeNewsCard = ({news}) => {
     const{title, text} = news;
@@ -12,4 +12,4 @@ function HomeNewsCard = ({news}) => {
     )
 }
 
-export default HomeNewsCard
+export default HomeNewsCard*/
